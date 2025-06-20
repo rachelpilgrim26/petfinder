@@ -61,7 +61,7 @@ function getAdoptablePets(formData) {
 function showPets(petData) {
   const results = document.getElementById("results");
   results.innerHTML = "";
-  // lear previous results if not they will just keep showing
+  // clear previous results if not they will just keep showing
 
   petData.forEach((pet) => {
     const petCard = document.createElement("div");
@@ -71,8 +71,10 @@ function showPets(petData) {
       <img src="${
         pet.photos[0]?.medium || "https://via.placeholder.com/150"
       }" alt="${pet.name}" />
+      //had to get help from chatgpt on this ii still dont understand it but i am gonna look into it 
       <h3>${pet.name}</h3>
       <p>Breed: ${pet.breeds.primary || "Unknown"}</p>
+      //this too got help from chatgpt 
       <p>Age: ${pet.age}</p>
       <p>Gender: ${pet.gender}</p>
     `;
